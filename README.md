@@ -16,10 +16,11 @@ npm install
 
 补全`src/common/js/config.js`中的`Token`信息：
 
-- `CesiumIonDefaultAccessToken`：前往 https://cesium.com/ 中注册账号，[详细教程](https://syzdev.cn/2021/08/10/注册Cesiumion教程/)，并且创建`Token`；
+- `CesiumIonDefaultAccessToken`：前往 https://cesium.com/ 中注册账号，[详细教程](https://syzdev.cn/2021/08/10/%E6%B3%A8%E5%86%8CCesium%20ion%E6%95%99%E7%A8%8B/)，并且创建`Token`；
 
 ### 注意事项
 第一次`npm run serve`编译项目时会报错，错误信息如下：
+
 ![error](/screenshot/error.png)
 
 报错原因为`node_modules`中的`cesium`库并没有导出`widget.css`文件，导致在引入`widget.css`时找不到该文件，究其原因为Cesium在模块化导出方面没有做的很完善，解决方法如下：
